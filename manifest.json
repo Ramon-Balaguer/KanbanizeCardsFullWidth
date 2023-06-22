@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Kambanize card full width",
+  "version": "0.1.5",
+  "description": "Cards at 100% width are cooler", 
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [{
+	"run_at" : "document_end",
+    "js": ["content.js"],
+    "matches": ["https://*.kanbanize.com/*"]
+  }],
+  "web_accessible_resources": [{
+    "resources": ["ajaxmediator.js"],
+    "matches": ["https://*.kanbanize.com/*"]
+  }]
+}
